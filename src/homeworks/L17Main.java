@@ -33,6 +33,7 @@ public class L17Main {
         Car fiat = new Car ("Fiat", 2020);
         Car seat = new Car ("Seat", 1999);
         Car renault = new Car ("Renault", 2010);
+        Car peugeot = new Car ("Peugeot", 2022);
 
         garage.add(vw);
         garage.add(audi);
@@ -42,13 +43,14 @@ public class L17Main {
 
         System.out.println(garage);
 
-        garage.removeByIndex(1);
+        garage.removeByIndex(-1);
         System.out.println(garage);
 
-        Car carByIndex = garage.getByIndex(3);
+        Car carByIndex = garage.getByIndex(-1);
         System.out.println(carByIndex);
 
-        garage.resize();
+        garage.add(peugeot);
+        garage.add(audi);
         System.out.println(garage);
 
     }
