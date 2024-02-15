@@ -1,7 +1,7 @@
-package homeworks.l22.transport;
+package homeworks.l23.transport;
 
 public class Bus extends Transport {
-    int passengerNumber;
+   protected int passengerNumber;
 
    public Bus(String mark, int productionYear, int passengerNumber) {
        super(mark, productionYear);
@@ -11,5 +11,8 @@ public class Bus extends Transport {
     public String toString(){
 
        return "Bus | " + mark + " | " + productionYear + " | " + passengerNumber;
+    }
+    public void printWhoAmI(){
+        System.out.println("I'm a Transport. I'm ecofriendly.");
     }
 }

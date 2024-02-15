@@ -1,8 +1,8 @@
-package homeworks.l22.transport;
+package homeworks.l23.transport;
 
 public class Car extends Transport {
 
-    String color;
+    protected String color;
 
     public Car(String mark, int productionYear, String color) {
         super(mark, productionYear);
@@ -11,5 +11,8 @@ public class Car extends Transport {
     public String toString(){
 
         return "Car | " + mark + " | " + productionYear + " | "+ color;
+    }
+    public void printWhoAmI(){
+        System.out.println("I'm a Transport. I'm not so ecofriendly.");
     }
 }

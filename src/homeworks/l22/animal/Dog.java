@@ -12,7 +12,7 @@ public class Dog extends Animal {
     }
 
     public String toString(){
-        return "Dog | " + weight + " | " + name + " | " + breed + " | ";
+        return "Dog | " + weight + "kg | " + name + " | " + breed + " | ";
 
     }
 }

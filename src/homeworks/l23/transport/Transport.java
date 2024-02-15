@@ -1,8 +1,8 @@
-package homeworks.l22.transport;
+package homeworks.l23.transport;
 
 public class Transport {
-    public String mark;
-    public int productionYear;
+    protected String mark;
+    protected int productionYear;
 
         public Transport(String mark, int productionYear){
             this.mark = mark;
