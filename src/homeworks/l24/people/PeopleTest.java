@@ -18,35 +18,35 @@ private People person3;
     }
     @Test //Рефлексивность: объект должен быть равен самому себе (x.equals(x) всегда true)
     public void testReflexivity() { //методы теста д.быть public void, начинаться со слова test
-        Assertions.assertTrue(person1.equals(person1));
+        Assertions.assertEquals(true, person1.equals(person1));
     }
     @Test //Симметричность: если x.equals(y) true, то и y.equals(x) должен быть true
     public void testSymmetry() {
-       Assertions.assertTrue((person1.equals(person2))&&(person2.equals(person1)));
+       Assertions.assertEquals(true, (person1.equals(person2))&&(person2.equals(person1)));
     }
     @Test
     public void testTransitivity(){
     //Транзитивность: если x.equals(y) и y.equals(z)оба true, то и x.equals(z) должен быть true
-       Assertions.assertTrue(person1.equals(person2) && person2.equals(person3)
+       Assertions.assertEquals(true,person1.equals(person2) && person2.equals(person3)
                && person1.equals(person3));
     }
     @Test
     public void testCoherency(){
     //Согласованность: если информация, используемая в сравнении объектов, не изменяется
     // то многократные вызовы x.equals(y) должны возвращать одинаковый результат
-        Assertions.assertTrue(person1.equals(person2));
-        Assertions.assertTrue(person1.equals(person2));
-        Assertions.assertTrue(person1.equals(person2));
+        Assertions.assertEquals(true, person1.equals(person2));
+        Assertions.assertEquals(true, person1.equals(person2));
+        Assertions.assertEquals(true, person1.equals(person2));
     }
     @Test
     public void testNotNull(){
     //Ненулевая ссылка: для любого ненулевого значения x, x.equals(null) должен быть false.
-    Assertions.assertFalse(person1.equals(null));
+    Assertions.assertEquals(false, person1.equals(null));
     }
     @Test
     public void testHash(){
         //если два объекта равны согласно методу equals, то вызов метода hashCode для этих объектов должен
         //возвращать одинаковое целочисленное значение
-        Assertions.assertTrue(person1.hashCode() == person2.hashCode());
+        Assertions.assertEquals(true, person1.hashCode() == person2.hashCode());
     }
 }
