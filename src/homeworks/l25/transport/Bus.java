@@ -1,4 +1,4 @@
-package homeworks.l24.transport;
+package homeworks.l25.transport;
 
 public class Bus extends Transport {
    protected int passengerNumber;

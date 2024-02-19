@@ -1,10 +1,10 @@
-package homeworks.l24.animal;
+package homeworks.l25.animal;
 
 public class Cow extends Animal {
     String color;
 
-   public Cow (int weight, String name, String color) {
-       super (weight, name);
+   public Cow (int weight, String name, String animalType, String color) {
+       super (weight, name, animalType);
        this.color = color;
     }
 

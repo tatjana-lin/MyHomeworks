@@ -1,4 +1,4 @@
-package homeworks.l24.people;
+package homeworks.l25.people;
 
 public class Woman extends People {
     protected String business;

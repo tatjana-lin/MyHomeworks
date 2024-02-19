@@ -1,6 +1,4 @@
-package homeworks.l24.transport;
-
-import homeworks.l24.animal.Animal;
+package homeworks.l25.transport;
 
 public class Transport {
     public String mark;
