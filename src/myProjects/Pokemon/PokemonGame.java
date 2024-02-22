@@ -1,4 +1,4 @@
-package myProjects;
+package myProjects.Pokemon;
 class Pokemon {
     String name;
     int hp;

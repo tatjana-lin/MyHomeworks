@@ -1,4 +1,4 @@
-package myProjects;
+package myProjects.CurrencyConverter;
 
 //Домашка №11, метод, возвращающий значение
 import java.util.Scanner;

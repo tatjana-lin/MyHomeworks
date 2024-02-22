@@ -1,4 +1,4 @@
-package myProjects;
+package myProjects.CurrencyConverter;
 
 //Домашка №9, void метод
 import java.util.Scanner;

@@ -1,6 +1,6 @@
 package homeworks.l27;
 
-public class Rectangle extends Shape implements ICalculator {
+public class Rectangle extends Shape{
     private double a, b; // длины сторон прямоугольника в см
     public Rectangle(String shapeName, String color, double a, double b) {
         super(shapeName, color);

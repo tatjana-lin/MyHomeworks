@@ -3,8 +3,6 @@ package homeworks.l26;
 public abstract class Shape {
     protected String shapeName;
     protected String color;
-    public double perimeter;
-    public double area;
 
     public Shape(String shapeName, String color) { // конструктор
         this.shapeName = shapeName;

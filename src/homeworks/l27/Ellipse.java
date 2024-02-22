@@ -2,7 +2,7 @@ package homeworks.l27;
 
 import static java.lang.Math.sqrt;
 
-public class Ellipse extends Shape implements ICalculator {
+public class Ellipse extends Shape {
     private double r1;//меньший радиус в см
     private double r2;//больший радиус в см
 

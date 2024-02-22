@@ -1,6 +1,6 @@
 package homeworks.l27;
 
-public class Semicircle extends Shape implements ICalculator{
+public class Semicircle extends Shape {
    private double radius;
 
     public Semicircle(String shapeName, String color, double radius) {

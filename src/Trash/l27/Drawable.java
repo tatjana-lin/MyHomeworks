@@ -1,4 +1,4 @@
-package homeworks.l27;
+package Trash.l27;
 
 public interface Drawable {
     void draw ();

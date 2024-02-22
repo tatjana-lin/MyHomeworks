@@ -1,4 +1,4 @@
-package myProjects;
+package myProjects.CurrencyConverter;
 import java.util.Scanner;
 
 public class CurrencyConverter1 {
