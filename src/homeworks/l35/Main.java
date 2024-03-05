@@ -1,10 +1,6 @@
 package homeworks.l35;
 
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 //Отсортируйте список используя Collections.sort +
 //Отсортируйте список используя Collections.sort и созданые компораторы +
@@ -19,7 +15,7 @@ public class Main {
         Beaver beaver1 = new Beaver("Bob", 10, 200);
         Beaver beaver2 = new Beaver("Ben", 8, 100);
         Beaver beaver3 = new Beaver("Berta", 5, 50);
-        Beaver beaver4 = new Beaver("Bella", 1, 10);
+        Beaver beaver4 = new Beaver("Bella", 3, 10);
 
         beavers.add(beaver1);
         beavers.add(beaver2);
@@ -41,13 +37,26 @@ public class Main {
         beavers.sort((o1, o2) -> o1.name.compareTo(o2.name));//сортировка по имени с использованием лямбда-выражения
         System.out.println("Бобры отсортированы по имени с помощью лямбда-выражения2: " + beavers);
 
-        Map<String, Integer> map = new HashMap<>();// создали HashMap
-        map.put("Bob", 200); // поместили туда пары ключ-значение
-        map.put("Ben", 100);
-        map.put("Berta", 50);
-        map.put("Bella", 10);
+        Map<String, Integer> beaverMap = new HashMap<>();// создали HashMap
+        for (Beaver beaver : beavers) { // поместили туда пары ключ-значение
+            beaverMap.put(beaver.name, beaver.relativesCount);
+        }
 
-        System.out.println(map);
+        System.out.println(beaverMap); //вывели этот map
 
+        //ДЗ № 36: Поместите часть бобров из 35 домашки в мешок (в hashset) (надо переопределить equals и hashCode у них)
+        //Проитерируйтесь по (старому) списку бобров и проверьте для каждого есть ли он в мешке
+
+        Set<Beaver> beaverSet = new HashSet<>(); //создаем мешок
+
+        beaverSet.add(beaver1); // сажаем туда бобров
+        beaverSet.add(beaver2);
+
+        System.out.println("==========================================================");
+        System.out.println("Домашка № 36" + "\nБобры в мешке: " + beaverSet);
+
+        for (Beaver beaver : beavers) { // проверяем наличие бобров из списка List в мешке
+            System.out.println("Бобр " + beaver.name + " есть в мешке: " + beaverSet.contains(beaver));
+        }
     }
 }

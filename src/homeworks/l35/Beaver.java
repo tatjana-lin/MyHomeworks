@@ -10,6 +10,8 @@ package homeworks.l35;
 //после всей этой сортировки сформируйте Map (например Hashmap) c данными вида имя бобра (ключ) и
 //количество родственников (значение) и выведите этот map
 
+import java.util.Objects;
+
 public class Beaver implements Comparable<Beaver>{
     String name;
     int age;
@@ -37,5 +39,18 @@ public class Beaver implements Comparable<Beaver>{
                 ", age=" + age +
                 ", relativesCount=" + relativesCount +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Beaver beaver = (Beaver) o;
+        return age == beaver.age && relativesCount == beaver.relativesCount && Objects.equals(name, beaver.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, relativesCount);
     }
 }
