@@ -1,7 +1,7 @@
 package homeworks.l31.coffeeMaker;
 @FunctionalInterface
 interface CoffeeMaker{// функциональный интерфейс с одним абстрактным методом
-public void makeCoffee();
+void makeCoffee();
 }
 class L31Main {
     public static void main(String[] args) {
